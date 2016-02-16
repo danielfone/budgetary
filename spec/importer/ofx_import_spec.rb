@@ -12,10 +12,10 @@ module Budgetary::Importer
       import = OFXImport.new ofx
       transactions = import.transactions
 
-      expect(transactions.size).to eq 4
+      expect(transactions.size).to eq 3
       # NB, the ofx gem parses dates into system timezones :(
       expect(transactions.first).to eq({
-        account_id: '0000000000100000000002',
+        account_id: '00000000001',
         amount: 200,
         fit_id: "000000003",
         memo: "automatic deposit",

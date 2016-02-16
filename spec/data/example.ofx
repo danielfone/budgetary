@@ -80,41 +80,5 @@ NEWFILEUID:NONE
         </AVAILBAL>
       </STMTRS>
     </STMTTRNRS>
-    <STMTTRNRS>
-      <TRNUID>23382938
-      <STATUS>
-        <CODE>0
-        <SEVERITY>INFO
-      </STATUS>
-      <STMTRS>
-        <CURDEF>USD
-        <BANKACCTFROM>
-          <BANKID>00000
-          <ACCTID>00000000002
-          <ACCTTYPE>CHECKING
-        </BANKACCTFROM>
-        <BANKTRANLIST>
-          <DTSTART>20070101
-          <DTEND>20071015
-          <STMTTRN>
-            <TRNTYPE>CREDIT
-            <DTPOSTED>20070320
-            <DTUSER>20070320
-            <TRNAMT>123.45
-            <FITID>000000003
-            <NAME>DEPOSIT
-            <MEMO>automatic deposit
-          </STMTTRN>
-        </BANKTRANLIST>
-        <LEDGERBAL>
-          <BALAMT>3200.00
-          <DTASOF>20071015021529.000[-8:PST]
-        </LEDGERBAL>
-        <AVAILBAL>
-          <BALAMT>3200.00
-          <DTASOF>20071015021529.000[-8:PST]
-        </AVAILBAL>
-      </STMTRS>
-    </STMTTRNRS>
   </BANKMSGSRSV1>
 </OFX>
