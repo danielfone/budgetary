@@ -7,9 +7,14 @@ module Budgetary::Importer
       @parser = OFX(ofx)
     end
 
+    def account
+      @parser.account
+    end
+
     def transactions
-      @parser.account.transactions.map do |t|
+      account.transactions.map do |t|
         {
+          account_id: account.id,
           amount: t.amount,
           fit_id: t.fit_id,
           memo: t.memo,

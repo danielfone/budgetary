@@ -15,6 +15,7 @@ module Budgetary::Importer
       expect(transactions.size).to eq 4
       # NB, the ofx gem parses dates into system timezones :(
       expect(transactions.first).to eq({
+        account_id: '0000000000100000000002',
         amount: 200,
         fit_id: "000000003",
         memo: "automatic deposit",
