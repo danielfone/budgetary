@@ -23,3 +23,5 @@ module Budgetary
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+require 'importer/ofx_import'
