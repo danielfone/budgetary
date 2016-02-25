@@ -28,7 +28,7 @@ module Classifier
       @correct_ratio = (results[:correct] / testing_txns.size.to_f).round(3)
       @wrong_ratio = (results[:wrong] / testing_txns.size.to_f).round(3)
       @blank_ratio = (results[:blank] / testing_txns.size.to_f).round(3)
-      expect(@correct_ratio).to be > 0.7
+      expect(@correct_ratio).to be > 0.75
       expect(@wrong_ratio).to be < 0.3
       expect(@blank_ratio).to be < 0.3
     end
