@@ -26,13 +26,14 @@ module Classifier
     end
 
     def classify(features)
-      scores(features).keys.last
+      category, score = scores(features).last
+      category
     end
 
     def scores(features)
       categories.each_with_object({}) do |cat, h|
         h[cat] = score cat, features
-      end.sort_by {|k,v| v}.to_h
+      end.sort_by {|k,v| v}
     end
 
     # P(category|features) = P(features|category) * P(category) / P(features)

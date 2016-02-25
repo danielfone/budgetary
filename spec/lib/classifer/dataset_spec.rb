@@ -22,7 +22,6 @@ module Classifier
           h[:correct] += 1
         else
           h[:wrong] += 1
-          #puts "guessed: #{c.inspect} != actual: #{attrs['category'].inspect}\n\t#{attrs.inspect}\n\n"
         end
       end
 
@@ -31,7 +30,7 @@ module Classifier
       @blank_ratio = (results[:blank] / testing_txns.size.to_f).round(3)
       expect(@correct_ratio).to be > 0.7
       expect(@wrong_ratio).to be < 0.3
-      expect(@blank_ratio).to be < 0.1
+      expect(@blank_ratio).to be < 0.3
     end
 
     it "should return multiple classes if there's high uncertainty"
