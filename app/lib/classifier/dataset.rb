@@ -30,6 +30,8 @@ module Classifier
       category
     end
 
+private
+
     def scores(features)
       categories.each_with_object({}) do |cat, h|
         h[cat] = score cat, features
