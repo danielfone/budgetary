@@ -1,5 +1,3 @@
-require 'csv'
-
 module Classifier
   RSpec.describe Dataset do
     # Do expensize JSON load once
