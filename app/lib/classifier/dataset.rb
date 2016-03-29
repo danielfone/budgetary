@@ -9,7 +9,7 @@ module Classifier
       @total_count = 0
 
       # Caching
-      @_category_feature_count ||= Hash.new { |h,k| h[k] = Hash.new }
+      @_category_feature_count = Hash.new
     end
 
     def categories
@@ -23,6 +23,9 @@ module Classifier
       features.each do |f|
         @feature_counts[f][category] += 1
       end
+
+      # Cache invalidation
+      @_category_feature_count.clear
     end
 
     def classify(features)
@@ -56,7 +59,7 @@ private
     end
 
     def category_feature_count(category)
-      @_category_feature_count[@total_count][category] ||= @feature_counts.values.reduce(0) {|p, counts| p += counts[category] }
+      @_category_feature_count[category] ||= @feature_counts.values.reduce(0) {|p, counts| p += counts[category] }
     end
 
   end
